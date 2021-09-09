@@ -17,3 +17,14 @@
 		border-radius: 10px;
 	}
 }
+
+.bottom {
+
+	width: 100%;
+	border-top: 2px solid var(--ion-color-primary);
+	background-color: white;
+	position: fixed;
+	bottom: 0rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+}

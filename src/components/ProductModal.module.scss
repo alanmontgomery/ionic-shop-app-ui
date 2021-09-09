@@ -1,0 +1,102 @@
+.productTopInfo {
+
+	display: flex;
+	flex-direction: row;
+	// justify-content: space-around;
+	align-content: center;
+	align-items: center;
+
+	img {
+
+		height: 7rem;
+		border-radius: 10px;
+		padding: 1rem;
+    	border: 2px solid rgb(231, 231, 231);
+    	background-color: white;
+	}
+}
+
+.productCard {
+
+	margin-bottom: 5rem;
+}
+
+.productDetails {
+
+	margin-left: 1rem;
+
+	h3 {
+
+		font-weight: 600;
+	}
+}
+
+.productDescription {
+
+	margin-top: 1.2rem;
+
+	h3 {
+
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	div {
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+
+		ion-icon {
+
+			font-size: 5rem;
+			margin-left: 1rem;
+		}
+	}
+}
+
+.bottom {
+
+	width: 100%;
+	border-top: 2px solid var(--ion-color-primary);
+	background-color: white;
+	position: fixed;
+	bottom: 0rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+
+	ion-col {
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+	}
+
+	.price {
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+
+		ion-badge {
+
+			margin-left: 1rem;
+			margin-top: 0.1rem;
+		}
+	}
+}
+
+.animatedCart {
+
+	position: absolute;
+	right: 3rem;
+	bottom: 3.3rem;
+	font-size: 2rem;
+	display: none;
+}

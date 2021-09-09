@@ -1,13 +1,25 @@
 import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import { useStoreState } from 'pullstate';
-import { CartStore, CategoryStore, ProductStore } from '../store';
-import { getCart, getCategories, getProducts } from '../store/Selectors';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { CartProduct } from '../components/CartProduct';
+import { Heading } from '../components/Heading';
+import { CartStore } from '../store';
+import { getCart } from '../store/Selectors';
 
 import styles from "./Cart.module.scss";
 
 const Cart = () => {
 
   const cart = useStoreState(CartStore, getCart);
+  const [ amount, setAmount ] = useState(0);
+
+  useEffect(() => {
+
+    var total = 0.00;
+    cart.forEach(product => total += product.price);
+    setAmount(total);
+  }, [ cart ]);
 
   return (
     <IonPage>
@@ -36,11 +48,37 @@ const Cart = () => {
                   <p>Your cart is empty</p>
                   <IonButton color="primary" routerLink="/home">Shop now &rarr;</IonButton>
                 </div>
-                {/* <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_kqjmcwdh.json"  background="transparent"  speed="1"  style={{ width: "400px", height: "400px", margin: "0 auto", marginTop: "-8rem" }}  loop  autoplay></lottie-player> */}
               </IonCol>
             </IonRow>      
           }
+
+          { cart.length > 0 &&
+            <>
+              <IonRow className={ styles.cartContainer }>
+                <IonCol size="12">
+                  <Heading heading={ `You have ${ cart.length } products in your cart. Your total comes to £${ amount }.` } />
+                </IonCol>
+              </IonRow>
+
+              <IonRow>
+                { cart.map((product, index) => {
+
+                  return <CartProduct product={ product } key={ index } />;
+                })}
+              </IonRow>
+            </>
+          }
         </IonGrid>
+
+        { cart.length > 0 &&
+          <IonGrid className={ styles.bottom }>
+            <IonRow>
+              <IonCol size="12">
+                <IonButton color="primary" expand="block">Checkout (£{ amount })</IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        }
       </IonContent>
     </IonPage>
   );

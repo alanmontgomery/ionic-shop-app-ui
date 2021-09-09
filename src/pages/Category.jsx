@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import { Product } from '../components/Product';
+import { ProductModal } from '../components/ProductModal';
 import { ProductStore } from '../store';
 import { getCategoryProducts } from '../store/Selectors';
 import { capitalizeWords } from '../utils';
@@ -22,6 +23,7 @@ const Category = () => {
     setSelectedProduct(product);
     present({
       
+      cssClass: "product-modal",
       presentingElement: pageRef.current
     });
   }
@@ -43,7 +45,7 @@ const Category = () => {
   })
 
   return (
-    <IonPage>
+    <IonPage ref={ pageRef }>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">

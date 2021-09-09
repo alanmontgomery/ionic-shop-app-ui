@@ -1,0 +1,43 @@
+.productContainer {
+
+    padding: 1rem;
+    border: 2px solid rgb(231, 231, 231);
+    background-color: white;
+    // height: 17.5rem;
+    border-radius: 10px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+.coverImage {
+
+    height: 3rem;
+	width: 3rem;
+	margin-left: 1rem;
+    background-color: white;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.productInfo {
+
+	ion-badge {
+
+		margin-top: 0.6rem;
+	}
+
+	padding-right: 1rem;
+}
+
+.productTitle {
+
+	text-align: left;
+    font-size: 0.75rem;
+    letter-spacing: -0.03rem;
+	
+}

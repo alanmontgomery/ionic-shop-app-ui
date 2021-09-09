@@ -4,7 +4,7 @@ import { ProductStore } from "../store";
 import { getProducts } from "../store/Selectors";
 import { Product } from "./Product";
 
-export const TrendingProducts = () => {
+export const TrendingProducts = ({ click }) => {
 
   const products = useStoreState(ProductStore, getProducts);
 
@@ -14,7 +14,7 @@ export const TrendingProducts = () => {
 
         if (index === 4 || index === 13) {
 
-          return <Product product={ product } key={ `trending_${ index }` } />;
+          return <Product fromHome={ true } product={ product } key={ `trending_${ index }` } click={ () => click(product) } />;
         }
       })}
     </IonRow>

@@ -93,13 +93,18 @@ http://ionicframework.com/docs/theming/ */
   --ion-toolbar-color: #ff7d04;
   --ion-item-background: #000000 !important;
 
-  --ion-card-background: #272727 !important;
-  --ion-modal-background: #272727 !important;
+  --ion-card-background: #ffffff !important;
+  /* --ion-modal-background: #272727 !important; */
 }
 
 ion-content ion-title {
 
   color: black;
+}
+
+ion-modal ion-toolbar {
+
+  --background: white;
 }
 
 ion-modal {
