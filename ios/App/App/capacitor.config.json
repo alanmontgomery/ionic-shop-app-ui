@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ionic-shop-app-ui",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

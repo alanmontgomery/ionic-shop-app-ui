@@ -20,6 +20,11 @@
 
     font-size: 1rem;
     letter-spacing: -0.03rem;
+	display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  height: 40px;
 }
 
 .productInfo,

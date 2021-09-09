@@ -18,7 +18,7 @@ const Cart = () => {
 
     var total = 0.00;
     cart.forEach(product => total += product.price);
-    setAmount(total);
+    setAmount(total.toFixed(2));
   }, [ cart ]);
 
   return (

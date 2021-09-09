@@ -1,9 +1,8 @@
-import { IonBadge, IonButton, IonButtons, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonNote, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBadge, IonButton, IonButtons, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import { cart, star } from 'ionicons/icons';
 import { useRef } from 'react';
 import { addToCart } from '../store/CartStore';
 import { capitalizeWords } from '../utils';
-import { Heading } from './Heading';
 
 import styles from "./ProductModal.module.scss";
 

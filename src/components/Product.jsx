@@ -6,7 +6,7 @@ export const Product = ({ product, click, fromHome = false }) => {
 
   return (
 
-    <IonCol size="6" onClick={ click } className={ !fromHome ? "animate__animated animate__faster animate__slideInRight" : null }>
+    <IonCol size="6" onClick={ click }>
       <div className={ styles.productContainer }>
         <div style={{ backgroundImage: `url(${ product.image })` }} className={ styles.coverImage } />
         <h1 className={ `${ styles.productTitle } truncate` }>{ product.title }</h1>
