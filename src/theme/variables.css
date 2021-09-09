@@ -75,7 +75,16 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-shade: #e0e0e0;
   --ion-color-light-tint: #ffffff;
 
-  --ion-background-color: #ffffff !important;
+  /** white **/
+  --ion-color-light: #ffffff;
+  --ion-color-light-rgb: 255, 255, 255;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #ffffff;
+  --ion-color-light-tint: #ffffff;
+
+  /* --ion-background-color: #ffffff !important; */
+  --ion-background-color: #f1f1f1;
   --ion-tab-bar-color-selected: #ffffff;
   --ion-tab-bar-color: #616161;
   --ion-text-color: black;
@@ -188,6 +197,14 @@ body {
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #e0e0e0;
   --ion-color-light-tint: #ffffff;
+
+  /** white **/
+  --ion-color-light: #ffffff;
+  --ion-color-light-rgb: 255, 255, 255;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #ffffff;
+  --ion-color-light-tint: #ffffff;
 }
 
 /*
@@ -256,4 +273,12 @@ body {
   --ion-color-step-850: #dbdbdb;
   --ion-color-step-900: #e7e7e7;
   --ion-color-step-950: #f3f3f3;
+}
+
+.truncate {
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }

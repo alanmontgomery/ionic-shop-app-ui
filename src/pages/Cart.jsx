@@ -1,14 +1,13 @@
-import { IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import { useStoreState } from 'pullstate';
-import { CategoryStore, ProductStore } from '../store';
-import { getCategories, getProducts } from '../store/Selectors';
+import { CartStore, CategoryStore, ProductStore } from '../store';
+import { getCart, getCategories, getProducts } from '../store/Selectors';
 
-import styles from "./Home.module.scss";
+import styles from "./Cart.module.scss";
 
 const Cart = () => {
 
-  const categories = useStoreState(CategoryStore, getCategories);
-  const products = useStoreState(ProductStore, getProducts);
+  const cart = useStoreState(CartStore, getCart);
 
   return (
     <IonPage>
@@ -25,21 +24,22 @@ const Cart = () => {
         </IonHeader>
 
         <IonGrid>
-          <IonRow>
-            { (products.length > 0 && categories.length > 0) && categories.map((category, index) => {
 
-              const coverImage = products.filter(p => p.category === category)[0].image;
-              console.log(coverImage);
+          { cart.length < 1 &&
+                
+            <IonRow className={ styles.emptyCartContainer }>
+              <IonCol size="10" className="ion-text-center">
+                <div className={ styles.text }>
 
-              return (
-
-                <IonCol key={ index } size="4">
-                  <div style={{ backgroundImage: `url(${ coverImage })` }} className={ styles.coverImage } />
-                  { category }
-                </IonCol>
-              );
-            })}
-          </IonRow>
+                  <img src="/assets/cart.png" alt="no cart" />
+                  <h1>Hang on there!</h1>
+                  <p>Your cart is empty</p>
+                  <IonButton color="primary" routerLink="/home">Shop now &rarr;</IonButton>
+                </div>
+                {/* <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_kqjmcwdh.json"  background="transparent"  speed="1"  style={{ width: "400px", height: "400px", margin: "0 auto", marginTop: "-8rem" }}  loop  autoplay></lottie-player> */}
+              </IonCol>
+            </IonRow>      
+          }
         </IonGrid>
       </IonContent>
     </IonPage>

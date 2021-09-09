@@ -1,0 +1,19 @@
+.emptyCartContainer {
+
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	margin-top: 2rem;
+
+	.text {
+
+		
+		color: rgb(78, 78, 78);
+		padding: 1rem;
+    	border: 2px solid rgb(231, 231, 231);
+    	background-color: white;
+		border-radius: 10px;
+	}
+}

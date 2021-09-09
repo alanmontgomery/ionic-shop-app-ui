@@ -1,8 +1,10 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonIcon, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { cart, grid, home, search } from "ionicons/icons";
+import { cart, grid } from "ionicons/icons";
 import Home from './pages/Home';
+import Cart from './pages/Cart';
+import Category from './pages/Category';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -24,9 +26,6 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { useEffect } from 'react';
 import { fetchCategories, fetchProducts } from './utils';
-import Search from './pages/Search';
-import Cart from './pages/Cart';
-import Category from './pages/Category';
 
 const App = () => {
 
@@ -45,10 +44,6 @@ const App = () => {
               <Home />
             </Route>
 
-            <Route exact path="/search">
-              <Search />
-            </Route>
-
             <Route exact path="/cart">
               <Cart />
             </Route>
@@ -63,10 +58,6 @@ const App = () => {
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home">
               <IonIcon icon={ grid } />
-            </IonTabButton>
-
-            <IonTabButton tab="search" href="/search">
-              <IonIcon icon={ search } />
             </IonTabButton>
 
             <IonTabButton tab="cart" href="/cart">
