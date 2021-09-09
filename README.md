@@ -3,13 +3,14 @@ An example of a Shop App built with Ionic and React
 <br />
 If you'd like to support, you can <a className="link" href="https://www.buymeacoffee.com/ionicreacthub" target="_blank" rel="noopener">buy me a coffee</a> ☕️
 
-![Ionic React Shop App UI](https://repository-images.githubusercontent.com/390244002/f2ae1f3c-3661-465a-9e60-c17f4cfc576c)
+![Ionic React Shop App UI](https://repository-images.githubusercontent.com/404475440/b52ba520-2c45-4a95-9116-04d17793e560)
 
 ### Included in this Ionic React Template/UI
 * Animations (Ionic & custom)
-* Local API Fetching
-* Custom Floating Tabs
-* State management with Pullstate
+* API Fetching
+* Custom Tabs, toolbar
+* Bottom Sheet, Breadcrumbs
+* Pullstate & Add to Cart
 * SASS Modules & Ionic CSS utilities
 
 ### To run
