@@ -16,7 +16,7 @@ export const PopularCategories = () => {
         { categories.map((category, index) => {
 
           if (index === 0 || index === 2) {
-            return <IonButton fill="outline" routerLink={ `/category/${ category }`}>{ capitalizeWords(category) }</IonButton>;
+            return <IonButton key={ `popular_${ index }` } fill="outline" routerLink={ `/category/${ category }`}>{ capitalizeWords(category) }</IonButton>;
           } else return null;
         })}
       </IonCol>

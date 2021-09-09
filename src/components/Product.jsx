@@ -2,11 +2,11 @@ import { IonBadge, IonCol, IonIcon, IonNote } from "@ionic/react";
 import { star } from "ionicons/icons";
 import styles from "./Product.module.scss";
 
-export const Product = ({ product }) => {
+export const Product = ({ product, click }) => {
 
   return (
 
-    <IonCol size="6">
+    <IonCol size="6" onClick={ click }>
       <div className={ styles.productContainer }>
         <div style={{ backgroundImage: `url(${ product.image })` }} className={ styles.coverImage } />
         <h1 className={ `${ styles.productTitle } truncate` }>{ product.title }</h1>
